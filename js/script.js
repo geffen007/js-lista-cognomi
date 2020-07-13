@@ -34,27 +34,20 @@ for (var j = 1; j < cognomiCap.length; j++) {
 document.getElementById('surname-list').innerHTML=cognomiOl;
 
 
+// normalizzo il dato inserito con gli stessi criteri della lista ordinata
+
 var insTemp = inserito.slice(1).toLowerCase();
 inserito = inserito.charAt(0).toUpperCase();
 inserito = inserito + insTemp;
 
-// console.log(insTemp);
-console.log(inserito);
 
-
-
-
-// for (var k = 0; k < cognomiCap.length; k++) {
-//     if (cognomiCap[k] == inserito) {
-//         console.log(k+1);
-//     }
-// }
-
+// creo un ciclo che trova dove in dato inserito è presente nella lista
 var k=0;
 while(cognomiCap[k] != inserito) {
     k++;
 }
-
 k+=1;
 
-document.getElementById('position').innerHTML=("il numero da te inserito si trova nella posizione numero " + k);
+document.getElementById('position').innerHTML=("il cognome da te inserito si trova nella posizione numero " + k);
+
+// fine
