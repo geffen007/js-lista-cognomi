@@ -24,4 +24,14 @@ for (var i = 0; i < cognomi.length; i++) {
 
 cognomiCap.sort();
 
+// provo a stamparla sulla pagina in una lista ordinata
+
+var cognomiOl;
+
+for (var j = 0; j < cognomiCap.length; j++) {
+    cognomiOl+= "<li>" + cognomiCap[j] + "</li>";
+}
+
+document.getElementById('surname-list').innerHTML=(cognomiOl);
+
 console.log(cognomiCap);
