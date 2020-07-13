@@ -12,15 +12,16 @@ var cognomiResto; //var per il resto dei caratteri
 var cognomiCap= []; //array di destinazione
 
 // mi creo un ciclo for che va a prendere tutti i cognomi dal primo all'ultimo, li scompone e li reinserisce nell'array
-for (var i = 0; i < array.length; i++) {
+for (var i = 0; i < cognomi.length; i++) {
     cognomiPrima= cognomi[i].charAt(0);
-    cognomiPrima.toUpperCase();
+    cognomiPrima = cognomiPrima.toUpperCase();
     cognomiResto= cognomi[i].slice(1);
-    cognomiResto.toLowerCase();
+    cognomiResto= cognomiResto.toLowerCase();
+    var cogPrimaResto = cognomiPrima + cognomiResto;
 
-    cognomiCap.push(cogmoniPrima + scognomiResto);
+    cognomiCap.push(cogPrimaResto);
 }
 
-
+cognomiCap.sort();
 
 console.log(cognomiCap);
